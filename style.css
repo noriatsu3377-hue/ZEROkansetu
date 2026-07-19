@@ -40,11 +40,13 @@
 }
 
 html {
+    overflow-x: hidden;
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
 body {
+    overflow-x: hidden;
     background-color: var(--c-black-1);
     color: var(--c-white-2);
     font-family: var(--font-serif);
@@ -1461,4 +1463,10 @@ section {
     top: 0;
     color: var(--c-accent);
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .comparison-table.diff-table {
+        min-width: 100% !important;
+    }
 }
