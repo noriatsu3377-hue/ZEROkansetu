@@ -262,6 +262,16 @@ section {
     animation: fadeUp 1s forwards 0.5s;
 }
 
+.opening-logo-img {
+    height: 80px;
+    width: auto;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards 0.5s;
+    filter: invert(1); /* Assuming the logo might be dark, we invert it for black background. If it's already light, remove this. But usually ZERO logo is black on white. */
+}
+
 .opening-line {
     width: 0;
     height: 1px;
@@ -709,6 +719,14 @@ section {
     letter-spacing: 0.1em;
 }
 
+.instructor-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(255,255,255,0.1);
+    filter: grayscale(100%) contrast(1.1);
+}
+
 .instructor-title {
     font-family: var(--font-sans);
     font-size: 0.8rem;
@@ -776,6 +794,53 @@ section {
 
 .instructor-message p:last-child {
     margin-bottom: 0;
+}
+
+.instructor-message p:last-child {
+    margin-bottom: 0;
+}
+
+/* Anatomy Gallery */
+.anatomy-gallery {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.anatomy-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--c-white-1);
+}
+
+.anatomy-desc {
+    font-size: 0.9rem;
+    color: var(--c-gray-2);
+    margin-bottom: 1.5rem;
+}
+
+.anatomy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media (min-width: 480px) {
+    .anatomy-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.anatomy-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.8);
+    transition: var(--ts-fast);
+}
+
+.anatomy-img:hover {
+    filter: grayscale(0%) brightness(1);
 }
 
 /* Pricing Section */
@@ -1043,10 +1108,11 @@ section {
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-.footer-logo {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    letter-spacing: 0.2em;
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    margin: 0 auto 1.5rem;
+    filter: invert(1);
 }
 
 .footer-copyright {
