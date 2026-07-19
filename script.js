@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleOpeningAnimation();
 
     // 3. Scroll Reveal Animation
-    const revealElements = document.querySelectorAll('.reveal');
+    const revealElements = document.querySelectorAll('.reveal, .mask-reveal, .fade-up-text');
     
     const revealCallback = (entries, observer) => {
         entries.forEach(entry => {
