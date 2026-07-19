@@ -566,64 +566,137 @@ section {
     color: var(--c-gray-2);
 }
 
-/* Curriculum Sections */
-.curriculum-intro {
-    font-size: 1.1rem;
-    margin-bottom: 4rem;
-    max-width: 800px;
+/* Curriculum Overview & Timeline */
+.curriculum-overview {
+    background: rgba(255,255,255,0.02);
+    padding: 2rem;
+    border-left: 3px solid var(--c-accent);
+    margin-bottom: 3rem;
 }
 
-.days-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 4rem;
+.curriculum-overview p {
+    font-size: 0.95rem;
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+.schedule-timeline {
+    margin-top: 3rem;
+}
+
+.schedule-day {
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    color: var(--c-black-1);
+}
+
+#advance .schedule-day {
+    color: var(--c-white-1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.timeline-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed rgba(0,0,0,0.05);
+}
+
+#advance .timeline-row {
+    border-bottom: 1px dashed rgba(255,255,255,0.05);
 }
 
 @media (min-width: 768px) {
-    .days-container {
-        grid-template-columns: 1fr 1fr;
+    .timeline-row {
+        flex-direction: row;
         gap: 3rem;
     }
 }
 
-.day-card {
+.timeline-time {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--c-accent);
+    flex-shrink: 0;
+    width: 140px;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    list-style: none;
     padding: 0;
 }
 
-.outline-card {
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 3rem;
-}
-
-.day-title {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(0,0,0,0.1); /* Light section default */
-}
-
-#advance .day-title {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.curriculum-list li {
+.timeline-content li {
     font-size: 0.95rem;
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
     position: relative;
 }
 
-.curriculum-list li::before {
+.timeline-content li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0.7em;
+    top: 0.6em;
     width: 4px;
     height: 4px;
     background-color: var(--c-accent);
 }
 
-#advance .curriculum-list li {
+.timeline-note {
+    font-size: 0.85rem;
+    color: var(--c-accent);
+    margin-top: 1rem;
+    background: rgba(142,23,27,0.05);
+    padding: 1rem;
+}
+
+/* Comparison Table */
+.comparison-table-wrapper {
+    margin-top: 4rem;
+    overflow-x: auto;
+}
+
+.comparison-table-wrapper h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.02);
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+    width: 50%;
+}
+
+.comparison-table th {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--c-white-1);
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+}
+
+.comparison-table td {
+    font-size: 0.95rem;
     color: var(--c-gray-2);
 }
 
@@ -844,6 +917,20 @@ section {
 }
 
 /* Pricing Section */
+.pricing-category-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--c-black-1);
+}
+
+.pricing-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--c-accent);
+    margin-bottom: 2rem;
+}
+
 .pricing-table {
     display: flex;
     flex-direction: column;
